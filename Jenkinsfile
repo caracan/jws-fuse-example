@@ -1,7 +1,9 @@
 pipeline {
+  
   agent {
       label 'maven'
   }
+
   stages {
     stage('Build WAR') {
       steps {
@@ -42,4 +44,4 @@ pipeline {
       }
     }
   }
-}i
+}
