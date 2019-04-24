@@ -1,7 +1,7 @@
 apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
-  name: jws-hello-build
+  name: hello-jws-build
 spec:
   runPolicy: Serial
   source:
