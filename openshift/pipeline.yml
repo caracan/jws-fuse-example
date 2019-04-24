@@ -1,0 +1,20 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: jws-hello-build
+spec:
+  runPolicy: Serial
+  source:
+    git:
+      ref: master
+      uri: "https://github.com/benemon/jws-fuse-example"
+    type: Git
+  strategy:
+    jenkinsPipelineStrategy:
+      env:
+        - name: NEXUS_URL
+          value: "http://nexus-internal.shared-services.svc.cluster.local:8081"
+      jenkinsfilePath: Jenkinsfile
+    type: JenkinsPipeline
+  triggers:
+    - type: ConfigChange
