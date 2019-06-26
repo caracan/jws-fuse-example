@@ -36,7 +36,7 @@
           <header>name</header>
           <!-- yes so return back a message to the user -->
           <transform>
-            <simple>Hi I am ${sysenv.HOSTNAME}. Hello ${header.name}, how are you today?</simple>
+            <simple>Hi I am ${sysenv.HOSTNAME}. Hello ${header.name}, Isn't this great?</simple>
           </transform>
         </when>
         <otherwise>
