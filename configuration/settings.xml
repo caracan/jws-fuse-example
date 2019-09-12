@@ -7,6 +7,18 @@
 			<id>build.repos</id>
 				<repositories>
 				<repository>
+					<id>cluster.local.ibm</id>
+					<name>OpenShift Local Nexus</name>
+					<url>http://nexus-internal.fuse-dev.svc.cluster.local:8081/repository/maven-all-public/</url>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+				</repository>
+				<repository>
 					<id>cluster.local</id>
 					<name>OpenShift Local Nexus</name>
 					<url>http://nexus-internal.shared-services.svc.cluster.local:8081/repository/maven-all-public/</url>
@@ -56,6 +68,18 @@
 				</repository>
 			</repositories>
 			<pluginRepositories>
+			    <pluginRepository>
+			     <id>cluster.local.ibm</id>
+					<name>OpenShift Local Nexus</name>
+					<url>http://nexus-internal.fuse-dev.svc.cluster.local:8081/repository/maven-all-public/</url>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+			    </pluginRepository>
 			    <pluginRepository>
 			     <id>cluster.local</id>
 					<name>OpenShift Local Nexus</name>
